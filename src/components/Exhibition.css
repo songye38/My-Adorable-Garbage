@@ -1,0 +1,159 @@
+.exhibition-page {
+    width: 100%;
+    min-height: 100vh;
+    background: #fff;
+    color: #222;
+}
+
+
+
+.exhibition-stage {
+    position: relative;
+    width: 100%;
+    height: 95vh;
+    overflow: hidden;
+    background: #fff;
+}
+
+.exhibition-instruction {
+    position: absolute;
+    top: 28px;
+    left: 4%;
+    color: #888;
+    font-size: 13px;
+    z-index: 1;
+}
+
+.exhibition-object-wrapper {
+    display: contents;
+}
+
+.exhibition-trash {
+    position: absolute;
+    bottom: -200px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 5;
+}
+
+.exhibition-story {
+    display: flex;
+    gap: 50px;
+    padding: 36px 4%;
+    border-top: 1px solid #eee;
+    min-height: 180px;
+}
+
+.exhibition-story-meta {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    min-width: 150px;
+    color: #888;
+    font-size: 12px;
+}
+
+.exhibition-story-content h2 {
+    margin: 0 0 12px;
+    font-size: 24px;
+}
+
+.exhibition-story-content p {
+    margin: 0 0 8px;
+    color: #666;
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+.exhibition-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 4% 36px;
+    color: #999;
+    font-size: 12px;
+}
+
+.exhibition-footer button {
+    padding: 10px 16px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    background: #fff;
+    cursor: pointer;
+}
+
+.exhibition-footer button:hover {
+    background: #f5f5f5;
+}
+
+
+.exhibition-page {
+    position: relative;
+    width: 100%;
+    height: 100dvh;
+    overflow: hidden;
+    background: #fff;
+}
+
+/* 고정된 헤더 */
+.exhibition-header {
+    height: 72px;
+    padding: 0 4%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #eee;
+    background: #fff;
+}
+
+/* 스크롤 가능한 영역 */
+.exhibition-scroll {
+    position: relative;
+    height: calc(100dvh - 72px);
+    overflow-y: auto;
+    overflow-x: hidden;
+    overscroll-behavior: contain;
+}
+
+/* 물건이 배치되는 긴 캔버스 */
+.exhibition-stage {
+    position: relative;
+    width: 100%;
+    height: 1500px;
+    background: #fff;
+}
+
+.exhibition-instruction {
+    position: absolute;
+    top: 28px;
+    left: 4%;
+    color: #888;
+    font-size: 13px;
+}
+
+/* 화면 하단에 고정된 휴지통 */
+.exhibition-trash {
+    position: fixed;
+    bottom: -250px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 100;
+    pointer-events: none;
+}
+
+/* 모바일 */
+@media (max-width: 768px) {
+    .exhibition-scroll {
+        height: calc(100dvh - 64px);
+    }
+
+    .exhibition-stage {
+        height: 1800px;
+    }
+
+    .exhibition-trash {
+        bottom: -260px;
+        transform: translateX(-50%) scale(0.85);
+        transform-origin: bottom center;
+    }
+}
